@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="20px" viewBox="0 0 19 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>icons8-edit_file</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Card" transform="translate(-190.000000, -12.000000)" fill="#314088" fill-rule="nonzero">
+            <g id="icons8-edit_file" transform="translate(190.000000, 12.000000)">
+                <path d="M3,0 C1.300781,0 0,1.300781 0,3 L0,17 C0,18.699219 1.300781,20 3,20 L7,20 L7,18 L3,18 C2.398438,18 2,17.601563 2,17 L2,3 C2,2.398438 2.398438,2 3,2 L13,2 C13.601563,2 14,2.398438 14,3 L14,10.59375 L16,8.59375 L16,3 C16,1.300781 14.699219,0 13,0 L3,0 Z M17.1875,10 C17.085938,10 16.914063,10.085938 16.8125,10.1875 L16,11 L18,13 L18.8125,12.1875 C19.011719,11.988281 19.011719,11.601563 18.8125,11.5 L17.5,10.1875 C17.5,9.988281 17.289063,10 17.1875,10 Z M15.5,11.5 L9,18 L9,20 L11,20 L17.5,13.5 L15.5,11.5 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>
