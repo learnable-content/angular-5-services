@@ -1,0 +1,30 @@
+@import '../../../styles/styles.scss';
+
+textarea, input {
+  padding: 0.5em;
+  font-family: $font-family-body;
+  color: $color-primary;
+  background-color: $color-base;
+  @include border-radius(0.5em);
+}
+
+button {
+  padding: 1em;
+  color: $color-base;
+  border: none;
+  background: none;
+  font-size: $font-size-lg;
+}
+
+.card-body {
+  height: 250px;
+  width: 250px;
+  padding: 1em 2em;
+  margin-bottom: 3em;
+  @include box-shadow(rgba(0, 0, 0, 0.1) -5px 5px 2px);
+  @include snipped-card-bg($color-secondary);
+}
+
+.icon {
+  color: $color-primary;
+}

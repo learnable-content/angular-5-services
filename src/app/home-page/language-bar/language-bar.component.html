@@ -1,0 +1,39 @@
+<nav fxLayout="row" fxLayoutAlign="end center" [fxShow.xs]="false" id="bar-container">
+  <div fxFlex="90" fxLayout="row" fxLayoutAlign="start space-evenly" fxLayoutGap="1em"
+       class="language-container">
+    <h2 *ngIf="selectedLanguages.size === 0">Start By Choosing a Language</h2>
+    <h2 *ngFor="let lang of selectedLanguages" (click)="updateSelectedLanguage(lang)"
+        [ngClass]="{'selected': lang === selectedLanguage}">{{lang}}</h2>
+  </div>
+  <a fxFlex="10" (click)="show()">
+    <i class="fas fa-plus-circle fa-2x"></i>
+  </a>
+</nav>
+
+<nav fxShow="false" [fxShow.xs]="true" fxLayout="column" fxLayoutAlign="start center"
+     id="sidebar-container" [ngClass]="{'open': sidenavOpen}">
+  <a fxFlex id="sidenav-toggle" (click)="toggleSidenav()">
+    <i class="fas fa-ellipsis-h fa-2x menu-button"></i>
+  </a>
+  <div fxFlexAlign="center" (click)="show()">
+    <i class="fas fa-plus-circle fa-2x"></i>
+  </div>
+  <div fxLayout="column" fxLayoutAlign="start space-evenly" fxLayoutGap="1em" class="language-container">
+    <h2 *ngFor="let lang of selectedLanguages" (click)="updateSelectedLanguage(lang)"
+        [ngClass]="{'selected': lang === selectedLanguage}">{{lang}}</h2>
+  </div>
+</nav>
+<app-modal-window [(showing)]="showModal" [header]="headerText">
+  <div fxFlex fxLayout="column" fxLayoutAlign="center center" id="language-list">
+    <p fxFlexAlign="stretch" *ngFor="let lang of languageOptions" (click)="updateNewSelection(lang)"
+       [ngClass]="{'selected': lang === newSelection}">
+      {{lang}}
+    </p>
+  </div>
+  <div fxFlex fxLayout="column" fxLayoutAlign="center end">
+    <button id="close-button" type="button" (click)="saveLanguage()"
+      [disabled]="!newSelection" [ngClass]="{'disabled': !newSelection}">
+      ADD
+    </button>
+  </div>
+</app-modal-window>

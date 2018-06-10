@@ -1,0 +1,25 @@
+<div class="card-body" fxLayout="column" fxLayoutAlign="center center" (click)="openModal()">
+  <div class="icon">
+    <i class="fas fa-plus-circle fa-5x"></i>
+  </div>
+</div>
+<app-modal-window [header]="headerText" [(showing)]="showModal">
+  <form fxLayout="column" fxLayoutAlign="space-around stretch"
+        fxLayoutGap="0.5em" #snippetForm="ngForm" (ngSubmit)="addSnippet()">
+    <div fxFlex fxFlexOrder="1">
+      <label for="name">Name</label>
+      <input fxFlexFill id="name" type="text" class="form-control" name="name" [(ngModel)]="name" required>
+    </div>
+    <div fxFlex fxFlexOrder="2">
+      <label for="desc">Description</label>
+      <input fxFlexFill id="desc" type="text" class="form-control" name="desc" [(ngModel)]="desc" required>
+    </div>
+    <div fxFlex fxFlexOrder="3">
+      <label for="code">Code Snippet</label>
+      <textarea fxFlexFill class="form-control" id="code" name="code" [(ngModel)]="code" required></textarea>
+    </div>
+    <div fxLayoutAlign="end center" fxFlexOrder="4">
+      <button type="submit">SAVE</button>
+    </div>
+  </form>
+</app-modal-window>

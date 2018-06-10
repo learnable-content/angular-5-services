@@ -1,0 +1,11 @@
+<div class="card-body" fxLayout="column" fxLayoutAlign="start center" (click)="showDetails()">
+  <h1>{{snippet?.title}}</h1>
+  <h2>{{snippet?.desc}}</h2>
+</div>
+<app-modal-window [(showing)]="showModal" [header]="snippet?.title">
+  <div fxFlexAlign="start center">
+    <pre fxFlexAlign="stretch">
+      <code class="bordered" [innerHTML]="snippet?.code" #codeSnippet></code>
+    </pre>
+  </div>
+</app-modal-window>

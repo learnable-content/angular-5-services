@@ -1,0 +1,22 @@
+@import 'variables';
+
+@mixin snipped-card-bg($color) {
+  background: -moz-linear-gradient(225deg, transparent 30px, $color 30px);
+  background: -webkit-linear-gradient(225deg, transparent 30px, $color 30px);
+  background: -ms-linear-gradient(225deg, transparent 30px, $color 30px);
+  background: -o-linear-gradient(225deg, transparent 30px, $color 30px);
+  background: linear-gradient(225deg, transparent 30px, $color 30px);
+}
+
+@mixin box-shadow($settings) {
+  -webkit-box-shadow: $settings;
+  -o-box-shadow: $settings;
+  -moz-box-shadow: $settings;
+  box-shadow: $settings;
+}
+
+@mixin border-radius($size) {
+  -moz-border-radius: $size;
+  -webkit-border-radius: $size;
+  border-radius: $size;
+}

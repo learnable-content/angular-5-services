@@ -1,0 +1,38 @@
+@import '../../../styles/styles.scss';
+
+h1 {
+  font-family: $font-family-header;
+  font-size: $font-size-lg;
+  color: $color-base
+}
+
+#modal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10 !important;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#modal-body {
+  position: relative;
+  margin: 3em;
+  min-width: 30%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: $color-primary;
+  padding: 2em;
+  color: $color-base;
+  border: 0.35em solid $color-base;
+  @include border-radius(1em);
+}
+
+#close-button {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1em;
+  cursor: pointer;
+}

@@ -1,0 +1,79 @@
+@import '../../../styles/styles';
+
+h2, svg {
+  cursor: pointer;
+}
+
+h2 {
+  color: $color-base;
+  font-family: $font-family-header;
+  font-size: $font-size-lg;
+  padding: 1em;
+}
+
+svg {
+  color: $color-base;
+  margin: 1em;
+}
+
+button {
+  background: none;
+  border: none;
+  font-family: $font-family-header;
+  font-size: $font-size-lg;
+  color: $color-base;
+  font-weight: $font-bold;
+  cursor: pointer;
+}
+
+p {
+  padding: 1em;
+}
+
+.language-container {
+  margin: 0 10px;
+  overflow: auto;
+}
+
+.menu-button {
+  background-color: $color-primary;
+  color: $color-base;
+  border: $color-base solid 2px;
+  @include border-radius(100%);
+}
+
+.selected {
+  background-color: rgba(255, 255, 255, 0.3);
+  @include border-radius(0.5em);
+}
+
+#sidebar-container {
+  background-color: $color-primary;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transform: translateX(-80%);
+}
+
+#sidebar-container.open {
+  transform: translateX(0%);
+}
+
+#sidenav-toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(50%);
+}
+
+#bar-container {
+  background-color: $color-primary;
+  padding: 0 2em;
+  @include box-shadow(rgba(0, 0, 0, 0.1) 0 5px 2px 2px);
+}
+
+#language-list {
+  overflow-x: hidden;
+  overflow-y: auto;
+}

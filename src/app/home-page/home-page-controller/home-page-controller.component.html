@@ -1,0 +1,13 @@
+<div>
+  <app-language-bar (languageSelected)="newLanguageSelected($event)"></app-language-bar>
+</div>
+<div class="card-container" fxLayoutWrap fxLayout="row"
+     fxLayoutAlign="start center" fxLayoutAlign.xs="center center"
+     fxLayoutGap="2em" fxLayoutGap.xs="0">
+  <div>
+    <app-snippet-adder [lang]="language" (snippetAdded)="newSnippetAdded($event)"></app-snippet-adder>
+  </div>
+  <div *ngFor="let snippet of snippets">
+    <app-snippet-card [snippet]="snippet"></app-snippet-card>
+  </div>
+</div>
